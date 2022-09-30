@@ -1,4 +1,4 @@
-package com.qa.java.oop;
+package com.qa.java;
 
 public class Employee {
 

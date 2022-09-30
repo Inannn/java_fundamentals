@@ -1,8 +1,9 @@
-package com.qa.java.oop;
+package com.qa.java.arrays;
 
 public class Employee {
 
-	// State ( data )
+	//State ( data )
+	//instance variables
 	int id;
 	String name;
 	String department;
@@ -10,20 +11,10 @@ public class Employee {
 	float incrementPercentage;
 	byte age;
 	char gender;
-	// Each employee object will have its own state
 
-	// No-arg constructor
-	/*
-	 * Employee(){ System.out.println("Employee() constructor is called.."); id =
-	 * 111; name = "emp1"; department = "development"; salary = 456456.45; age = 25;
-	 * gender = 'M';
-	 * 
-	 * }
-	 */
-	// Arg constructor
-	public Employee(int id, String name, String department, double salary, byte age, char gender,
-			float incrementPercentage) {
-		System.out.println("Employee(arg) constructor is called...");
+
+	public Employee(int id, String name, String department, double salary, byte age, char gender,float incrementPercentage) {
+		//System.out.println("Employee(arg) constructor is called...");
 		this.id = id; // this refers to the current instance (object)
 		this.name = name;
 		this.department = department;
@@ -33,18 +24,22 @@ public class Employee {
 		this.incrementPercentage = incrementPercentage;
 	}
 
-	// method
+
+
+	//method
 	/*
 	 * Display employee information
 	 */
-	// instance method
+	//instance method
 	void displayEmployeeInformation() {
+		System.out.println("-----------------------------------");
 		System.out.println("id: " + id);
 		System.out.println("name:" + name);
 		System.out.println("department:" + department);
 		System.out.println("gender:" + gender);
 		System.out.println("salary:" + salary);
 		System.out.println("age:" + age);
+		System.out.println("-----------------------------------");
 	}
 
 	/*
@@ -52,7 +47,7 @@ public class Employee {
 	 */
 
 	double incrementedSalary() {
-		return (salary * incrementPercentage / 100);
+		return ( salary * incrementPercentage / 100 );
 	}
 
 	/*
@@ -62,5 +57,12 @@ public class Employee {
 	double totalSalary() {
 		return salary + incrementedSalary();
 	}
+
+
+
+
+
+
+
 
 }
